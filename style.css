@@ -1,0 +1,403 @@
+/* Decorative bubbles for visual interest */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  z-index: 2;
+  pointer-events: none;
+  animation: bubbleFloat 7s ease-in-out infinite alternate;
+}
+.bubble1 {
+  width: 120px;
+  height: 120px;
+  top: 12%;
+  left: 8vw;
+  background: #FFC907;
+  animation-delay: 0s;
+}
+.bubble2 {
+  width: 90px;
+  height: 90px;
+  bottom: 18%;
+  right: 12vw;
+  background: #77A8BB;
+  animation-delay: 2s;
+}
+.bubble3 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  right: 22vw;
+  background: #BF6C46;
+  animation-delay: 4s;
+}
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.08); }
+}
+
+/* Animated scroll arrow at the bottom of hero section */
+.scroll-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+.scroll-arrow span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-bottom: 4px solid #FFC907;
+  border-right: 4px solid #FFC907;
+  transform: rotate(45deg);
+  margin: -4px 0;
+  animation: arrowBounce 1.2s infinite;
+}
+.scroll-arrow span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.scroll-arrow span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes arrowBounce {
+  0%, 100% { opacity: 0.5; transform: translateY(0) rotate(45deg); }
+  50% { opacity: 1; transform: translateY(10px) rotate(45deg); }
+}
+/* Add animation to hero section for a friendly, dynamic feel */
+.hero-section {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add a soft hover effect to the call-to-action button */
+.cta-button.cta-large {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-button.cta-large:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px #FFC907;
+}
+
+/* Add a friendly welcome badge above the hero text */
+.welcome-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #FFC907 60%, #FED8C1 100%);
+  color: #003366;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 18px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #CBCCD1;
+  border: 2px solid #77A8BB;
+}
+
+/* Add a subtle floating animation to the hero image */
+.hero-image {
+  animation: float 3.5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+/* Add a soft divider below the hero section */
+.soft-divider {
+  width: 80%;
+  height: 4px;
+  margin: 36px auto 0 auto;
+  background: linear-gradient(90deg, #FFC907 0%, #FFF7E1 50%, #77A8BB 100%);
+  border-radius: 2px;
+  opacity: 0.7;
+  box-shadow: 0 1px 6px #CBCCD1;
+}
+/* Visually stunning hero section */
+.hero-section {
+  animation: fadeIn 1.2s ease;
+  position: relative;
+  min-height: 70vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #FED8C1 0%, #FFF7E1 60%, #77A8BB 100%);
+  overflow: hidden;
+  z-index: 1;
+  padding: 0 0 32px 0;
+  margin: 0 auto;
+}
+
+
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 80% 20%, #FFC907 0%, #FED8C1 40%, transparent 80%),
+              radial-gradient(circle at 10% 80%, #BF6C46 0%, #CBCCD1 50%, transparent 90%);
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 260px;
+  text-align: left;
+  padding: 24px 16px 24px 16px;
+}
+
+.hero-text h1 {
+  font-size: 2.3em;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  background: none;
+  box-shadow: none;
+}
+
+.hero-text .highlight {
+  color: #FFC907;
+  background: #003366;
+  border-radius: 6px;
+  padding: 0 8px;
+}
+
+.hero-text .subtitle {
+  font-size: 1.15em;
+  margin-bottom: 28px;
+  color: #003366;
+  background: #FFF7E1;
+  border-radius: 6px;
+  padding: 8px 0 8px 8px;
+  box-shadow: 0 1px 4px #CBCCD1;
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px 16px 24px 16px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 0 auto;
+  border: 5px solid #FFC907;
+  background: #CBCCD1;
+  box-shadow: 0 6px 32px #CBCCD1;
+}
+
+/* Color palette swatches */
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #1A1A1A;
+  box-shadow: 0 1px 4px #CBCCD1;
+}
+/* Header styling for logo */
+.main-header {
+  width: 100vw;
+  min-width: 100vw;
+  background: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 18px 0;
+  box-shadow: 0 2px 8px #B5C9D6;
+  margin: 0 auto 0 auto;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  height: 110px;
+  max-width: 400px;
+  object-fit: contain;
+  background: #FFF7E1;
+  border-radius: 12px;
+  padding: 12px 32px;
+  box-shadow: 0 4px 16px #FED8C1;
+  border: 3px solid #FFC907;
+  margin: 12px auto 0 auto;
+  display: block;
+}
+/* Larger, more eye-catching call to action button */
+.cta-large {
+  font-size: 1.3em;
+  padding: 18px 40px;
+  margin: 18px 0 10px 0;
+  box-shadow: 0 4px 16px #CBCCD1;
+  letter-spacing: 1px;
+
+/*
+  Simple, beginner-friendly CSS for the Charity: Water landing page
+  Comments explain each section for students learning HTML and CSS
+*/
+
+body {
+  /* Use Proxima Nova for all text. If not available, fall back to Arial or sans-serif */
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E3F2FD; /* Soft blue background */
+  color: #22223B; /* Main text color */
+
+
+/* Main content container */
+main.container {
+  max-width: 500px;
+  margin: 40px auto 20px auto;
+  background: linear-gradient(135deg, #FED8C1 60%, #FFF7E1 100%); /* Soft peach to cream gradient */
+  padding: 32px 24px 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #CBCCD1;
+  text-align: center;
+  border: 4px solid #77A8BB; /* Blue accent border */
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Eye-catching image styling */
+/* Eye-catching image styling */
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 auto 24px auto;
+  border: 4px solid #FFC907; /* Yellow accent border */
+  background: #CBCCD1; /* Light gray background */
+  box-shadow: 0 4px 16px #CBCCD1;
+}
+
+
+
+/* Headline style */
+/* Headline style */
+h1 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  color: #003366; /* Deep blue headline */
+  margin-bottom: 10px;
+  font-weight: 700;
+  background: #FFC907;
+  padding: 12px 0 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #CBCCD1;
+  letter-spacing: 0.5px;
+}
+
+}
+
+/* Subhead style */
+/* Subhead style */
+.subtitle {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  color: #BF6C46;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  background: #FFF7E1;
+  padding: 8px 0 6px 0;
+  border-radius: 8px;
+}
+}
+}
+
+/* Call to action button style */
+/* Call to action button style */
+.cta-button {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  display: inline-block;
+  background: linear-gradient(90deg, #FFC907 70%, #77A8BB 100%);
+  color: #003366;
+  padding: 16px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: background 0.2s;
+  border: 2px solid #BF6C46;
+  box-shadow: 0 2px 8px #CBCCD1;
+  cursor: pointer;
+  margin-top: 18px;
+}
+}
+
+/* Button hover uses more of the palette */
+/* Button hover uses more of the palette */
+.cta-button:hover {
+  background: linear-gradient(90deg, #BF6C46 60%, #003366 100%);
+  color: #FFF7E1;
+  border-color: #FFC907;
+  box-shadow: 0 4px 16px #BF6C46;
+}
+}
+}
+
+/* Info section styling */
+/* Info section styling */
+.info-section {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  background: linear-gradient(135deg, #77A8BB 70%, #CBCCD1 100%);
+  padding: 22px 18px 18px 18px;
+  border-radius: 12px;
+  text-align: center;
+  color: #1A1A1A;
+  border: 2px solid #003366;
+  box-shadow: 0 2px 8px #FED8C1;
+}
+}
+}
+
+/* Info section headline style */
+/* Info section headline style */
+.info-section h2 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  color: #FFF7E1;
+  margin-top: 0;
+  background: #BF6C46;
+  padding: 10px 0 6px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #CBCCD1;
+}
+}
+}
